@@ -14,7 +14,7 @@ framework
 ├─modules  模型目录
 
 ├─themes  模板目录
-
+sa'b
 │  └─default
 
 │      └─include
@@ -111,7 +111,7 @@ _g($name, $type = '')	$name 变量名	读取参数GET或者POST参数
 
 trim_xss($data)	$type 过滤成的类型	对GET或者POST数据安全处理
 
-四、模型层说明
+##四、模型层说明
 
 模型层在modules目录中，命名规则为“类名.class.php”，articles.class.php是一个,
 
@@ -286,7 +286,7 @@ failed_css（0.5）	string	css class	错误提示的容错容器CSS样式（clas
 
 
 
-五、页面整体缓存
+##五、页面整体缓存
 
 1、使用方法
 
@@ -384,7 +384,7 @@ define('PAGE_CACHE_TYPE','file');
 
 不配置则默认使用file作为页面缓存。
 
-六、视图说明
+##六、视图说明
 
 标准php输出，按照控制器data()传递进入的变量进行处理。
 
@@ -398,7 +398,7 @@ get_router($class,$method='index')	$filename 模版文件名	按照路由规则�
 
 
 
-七、系统其他方法
+##七、系统其他方法
 
 
 
@@ -406,7 +406,7 @@ get_router($class,$method='index')	$filename 模版文件名	按照路由规则�
 
 
 
-八、系统其他方法
+##八、系统其他方法
 
 自定义函数方法统一写在 core/function/function.php中
 

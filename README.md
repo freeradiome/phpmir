@@ -305,6 +305,7 @@ protected  $_page_cached_method = array('index'); //需要静态化的方法
  完整例子：
 
 ```php
+
 <?php
 
 class Site extends Controller{
@@ -408,11 +409,4 @@ get_router($class,$method='index')	$filename 模版文件名	按照路由规则�
 八、系统其他方法
 
 自定义函数方法统一写在 core/function/function.php中
-
-
-
-
-
-
-
 

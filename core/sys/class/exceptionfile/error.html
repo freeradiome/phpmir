@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>异常信息处理</title>
+<style type="text/css">
+body,html{padding:0px;
+margin:0px;
+font-size:12px;
+}
+.error{
+border:1px solid #000;
+margin:6px;
+padding:6px;
+background:#fdfed6;
+font-size:12px;
+line-height:18px;
+}
+</style>
+</head>
+
+<body>
+<?php  
+//echo memory_get_usage(true);
+//echo "<br >";
+//echo memory_get_usage(false);
+foreach ($error_array as $k=>$err){
+?>
+<div class="error">
+<?php if($k==0){?>
+<?php if(!empty($errno)){?>
+错误号：<?php echo $errno; ?><br />
+<?php } ?>
+错误描述：<?php echo $errstr; ?><br />
+<?php } ?>
+	错误文件：<?php echo $err['file'] ?><br />
+	错误功能：<?php echo $err['function'] ?><br /> 
+	<?php if(!empty($err['object'])){?>
+	错误对象：<?php var_dump($err['object']) ?><br /> 
+	<?php } ?>
+	<?php if(!empty($err['type'])){?>
+	错误类型：<?php echo $err['type'] ?><br /> 
+		<?php } ?>
+		<?php if(!empty($err['args'])){?>
+	携带参数：<?php var_dump($err['args']) ?><br /> 
+	<?php } ?>
+	<?php if(!empty($err['file'])){?>
+	文件名：<?php echo $err['file'] ?><br />
+	<?php } ?>
+	<?php if(!empty($err['line'])){?>
+	行数：<?php echo $err['line'] ?>
+	<?php } ?>
+<div>
+	<?php if($k==0 && sizeof($error_array)>1){?>
+	错误信息追踪：<br />
+	<?php 	}?>
+<?php 
+}
+?>
+</body>
+</html>
